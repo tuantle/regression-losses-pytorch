@@ -38,7 +38,7 @@ Another shared characteristic is that they approximate MSE loss when
     *Plot of Log-cosh loss (greed) and its derivative (purple)*
 
 - XSigmoid Loss
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}x_i\big(2{sigmoid(x_i)}-1\big)\quad where \quad x_i=y_i-\hat{y_i}" title="XSigmoid Loss"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}x_i\big(2{sigmoid(x_i)}-1\big)\quad where\quad x_i=y_i-\hat{y_i}" title="XSigmoid Loss"/>
 
     - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=2sigmoid(x_i)+\frac{2x_i\cdot\exp(-x_i)}{sigmoid(x_i)^2}-1\quad where \quad x=y-\hat{y}" title="XSigmoid Error gradient"/>
 
