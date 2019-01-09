@@ -24,7 +24,7 @@ Another shared characteristic is that they approximate MSE loss when
 
 - Log-cosh Loss
     - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}\ln(\cosh(x_i))\quad where \quad x_i=y_i-\hat{y_i}" title="Log-cosh Loss"/>
-
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\where \quad x_i=y_i-\hat{y_i}" title="Log-cosh Loss"/>
     - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=\tanh(x)\quad where \quad x=y-\hat{y}" title="Log-cosh Error gradient"/>
 
     <p align="center">
