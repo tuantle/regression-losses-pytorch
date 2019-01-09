@@ -1,0 +1,15 @@
+MAE:
+Learning Epoch: 50/50 - Elapse/Pass: 6420 ms - Elapse: 330 s - Learning Loss: 0.022329868 - Testing Loss: 0.117060758
+
+MSE:
+Learning Epoch: 50/50 - Elapse/Pass: 6305 ms - Elapse: 335 s - Learning Loss: 0.002394330 - Testing Loss: 0.115144573
+
+
+LCL:
+Learning Epoch: 50/50 - Elapse/Pass: 6392 ms - Elapse: 324 s - Learning Loss: 0.001261333 - Testing Loss: 0.047380354
+
+XTL:
+Learning Epoch: 50/50 - Elapse/Pass: 7045 ms - Elapse: 332 s - Learning Loss: 0.002436433 - Testing Loss: 0.078622870
+
+XSL:
+Learning Epoch: 50/50 - Elapse/Pass: 7107 ms - Elapse: 335 s - Learning Loss: 0.001216892 - Testing Loss: 0.050838538
