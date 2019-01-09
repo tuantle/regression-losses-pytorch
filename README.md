@@ -23,6 +23,7 @@ Another shared characteristic is that they approximate MSE loss when
 <img src="https://latex.codecogs.com/svg.latex?&space;\pm{x}\to0" title=""/> and approximate MAE loss when <img src="https://latex.codecogs.com/svg.latex?&space;x\to\pm{\infty}" title=""/>.
 
 - Log-cosh Loss
+        - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}f(x)=\frac{xe^x}{1+e^x}=x\varsigma(x)" title="Swish"/>
     - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}\ln(\cosh(x_i))\quad where \quad x_i=y_i-\hat{y_i}" title="Log-cosh Loss"/>
 
     - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=\tanh(x)\quad where \quad x=y-\hat{y}" title="Log-cosh Error gradient"/>
