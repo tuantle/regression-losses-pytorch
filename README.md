@@ -52,7 +52,7 @@ Another shared characteristic is that they approximate MSE loss when
     *Plot of XSigmoid loss (greed) and its derivative (purple)*
 
 - XTanh Loss
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}(x_i)\cdot\tanh(x_i)\quad where \quad x_i=y_i-\hat{y_i}" title="XTanh Loss"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}(x_i)\cdot\tanh(x_i)\quad{where\quad{x_i=y_i-\hat{y_i}}}" title="XTanh Loss"/>
 
     - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=\tanh(x)+x\cdot(1-\tanh^2(x))\quad{where\quad{x=y-\hat{y}}}" title="XTanh Error gradient"/>
 
