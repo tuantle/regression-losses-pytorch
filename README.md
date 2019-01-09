@@ -37,9 +37,9 @@ Another shared characteristic is that they approximate MSE loss when
     *Plot of Log-cosh loss (greed) and its derivative (purple)*
 
 - XSigmoid Loss
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}x_i\big(2{sigmoid(x_i)}-1\big)\quad where\quad x_i=y_i-\hat{y_i}" title="XSigmoid Loss"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}x_i\big(2{sigmoid(x_i)}-1\big)\quad{where\quad{x_i=y_i-\hat{y_i}}}" title="XSigmoid Loss"/>
 
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=2sigmoid(x_i)+\frac{2x_i\cdot\exp(-x_i)}{sigmoid(x_i)^2}-1\quad where \quad x=y-\hat{y}" title="XSigmoid Error gradient"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=2sigmoid(x_i)+\frac{2x_i\cdot\exp(-x_i)}{sigmoid(x_i)^2}-1\quad{where\quad{x=y-\hat{y}}}" title="XSigmoid Error gradient"/>
 
     <p align="center">
         <img width="340" height="200" src="results/xsigmoid_loss.png">
@@ -54,7 +54,7 @@ Another shared characteristic is that they approximate MSE loss when
 - XTanh Loss
     - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}(x_i)\cdot\tanh(x_i)\quad where \quad x_i=y_i-\hat{y_i}" title="XTanh Loss"/>
 
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=\tanh(x)+x\cdot(1-\tanh^2(x))\quad where \quad x=y-\hat{y}" title="XTanh Error gradient"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=\tanh(x)+x\cdot(1-\tanh^2(x))\quad{where\quad{x=y-\hat{y}}}" title="XTanh Error gradient"/>
 
     <p align="center">
         <img width="340" height="200" src="results/xtanh_loss.png">
@@ -67,9 +67,9 @@ Another shared characteristic is that they approximate MSE loss when
     *Plot of Xtanh loss (greed) and its derivative (purple)*
 
 <!-- - Algebraic Loss
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}\frac{x_i^2}{\sqrt{x_i^2+1}}\quad where \quad x_i=y_i-\hat{y_i}" title="Algebraic Loss"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}\frac{x_i^2}{\sqrt{x_i^2+1}}\quad{where\quad{x_i=y_i-\hat{y_i}}}" title="Algebraic Loss"/>
 
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{error}}{\partial{y}}=\frac{x^3+2x}{(x^2+1)^{\frac3{2}}}\quad where \quad x=y-\hat{y}" title="Algebraic Error gradient"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{error}}{\partial{y}}=\frac{x^3+2x}{(x^2+1)^{\frac3{2}}}\quad{where\quad{x=y-\hat{y}}}" title="Algebraic Error gradient"/>
 
     <p align="center">
         <img width="340" height="200" src="assets/plots/algebraic_loss.png">
