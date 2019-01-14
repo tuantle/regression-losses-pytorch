@@ -4,13 +4,11 @@ So in machine learning algorithms, specificly deep learning in this case, there 
 
 In this experiment, we will take a look at some loss functions and see how they compare against eachother in a regression task. The test setup is going to be simple and non-rigorous - just compare result metrics such as loss / accuracy and training time or one perticular training task.
 
-For comparison, we are going to have two groups, a control group and a test group.
-
 All the code was implemented with Pytorch.
 
 ## Controls
 
-Functions in the control group are the standard mean squared and mean absolute error loss functions.
+For comparison, we are going to have two groups, a control group and a test group. Functions in the control group are the standard mean squared & mean absolute error loss functions. These will be used as base references to check how well the loss functions in the test group perform.
 
 - MSE Loss
 - MAE Loss
@@ -23,8 +21,9 @@ Another shared characteristic is that they approximate MSE loss when
 <img src="https://latex.codecogs.com/svg.latex?&space;\pm{x}\to0" title=""/> and approximate MAE loss when <img src="https://latex.codecogs.com/svg.latex?&space;x\to\pm{\infty}" title=""/>.
 
 - Log-cosh Loss
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}\ln(\cosh(x_i))\quad{where\quad{x_i=y_i-\hat{y_i}}}" title="Log-cosh Loss"/>
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=\tanh(x)\quad{where\quad{x=y-\hat{y}}}" title="Log-cosh Error gradient"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}\ln(\cosh(x_i))\quad where \quad x_i=y_i-\hat{y_i}" title="Log-cosh Loss"/>
+
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=\tanh(x)\quad where \quad x=y-\hat{y}" title="Log-cosh Error gradient"/>
 
     <p align="center">
         <img width="340" height="200" src="results/log_cosh_loss.png">
@@ -37,9 +36,9 @@ Another shared characteristic is that they approximate MSE loss when
     *Plot of Log-cosh loss (greed) and its derivative (purple)*
 
 - XSigmoid Loss
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}x_i\big(2{sigmoid(x_i)}-1\big)\quad{where\quad{x_i=y_i-\hat{y_i}}}" title="XSigmoid Loss"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}x_i\big(2{sigmoid(x_i)}-1\big)\quad where \quad x_i=y_i-\hat{y_i}" title="XSigmoid Loss"/>
 
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=2sigmoid(x_i)+\frac{2x_i\cdot\exp(-x_i)}{sigmoid(x_i)^2}-1\quad{where\quad{x=y-\hat{y}}}" title="XSigmoid Error gradient"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=2sigmoid(x_i)+\frac{2x_i\cdot\exp(-x_i)}{sigmoid(x_i)^2}-1\quad where \quad x=y-\hat{y}" title="XSigmoid Error gradient"/>
 
     <p align="center">
         <img width="340" height="200" src="results/xsigmoid_loss.png">
@@ -52,9 +51,9 @@ Another shared characteristic is that they approximate MSE loss when
     *Plot of XSigmoid loss (greed) and its derivative (purple)*
 
 - XTanh Loss
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}(x_i)\cdot\tanh(x_i)\quad{where\quad{x_i=y_i-\hat{y_i}}}" title="XTanh Loss"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}(x_i)\cdot\tanh(x_i)\quad where \quad x_i=y_i-\hat{y_i}" title="XTanh Loss"/>
 
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=\tanh(x)+x\cdot(1-\tanh^2(x))\quad{where\quad{x=y-\hat{y}}}" title="XTanh Error gradient"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{Error}}{\partial{y}}=\tanh(x)+x\cdot(1-\tanh^2(x))\quad where \quad x=y-\hat{y}" title="XTanh Error gradient"/>
 
     <p align="center">
         <img width="340" height="200" src="results/xtanh_loss.png">
@@ -67,9 +66,9 @@ Another shared characteristic is that they approximate MSE loss when
     *Plot of Xtanh loss (greed) and its derivative (purple)*
 
 <!-- - Algebraic Loss
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}\frac{x_i^2}{\sqrt{x_i^2+1}}\quad{where\quad{x_i=y_i-\hat{y_i}}}" title="Algebraic Loss"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{blue}Loss=\frac1{N}\sum_{i=1}^{N}\frac{x_i^2}{\sqrt{x_i^2+1}}\quad where \quad x_i=y_i-\hat{y_i}" title="Algebraic Loss"/>
 
-    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{error}}{\partial{y}}=\frac{x^3+2x}{(x^2+1)^{\frac3{2}}}\quad{where\quad{x=y-\hat{y}}}" title="Algebraic Error gradient"/>
+    - <img src="https://latex.codecogs.com/svg.latex?&space;\color{red}\frac{\partial{error}}{\partial{y}}=\frac{x^3+2x}{(x^2+1)^{\frac3{2}}}\quad where \quad x=y-\hat{y}" title="Algebraic Error gradient"/>
 
     <p align="center">
         <img width="340" height="200" src="assets/plots/algebraic_loss.png">
