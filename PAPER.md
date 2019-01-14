@@ -4,13 +4,11 @@ So in machine learning algorithms, specificly deep learning in this case, there 
 
 In this experiment, we will take a look at some loss functions and see how they compare against eachother in a regression task. The test setup is going to be simple and non-rigorous - just compare result metrics such as loss / accuracy and training time or one perticular training task.
 
-For comparison, we are going to have two groups, a control group and a test group.
-
 All the code was implemented with Pytorch.
 
 ## Controls
 
-Functions in the control group are the standard mean squared and mean absolute error loss functions.
+For comparison, we are going to have two groups, a control group and a test group. Functions in the control group are the standard mean squared & mean absolute error loss functions. These will be used as base references to check how well the loss functions in the test group perform.
 
 - MSE Loss
 - MAE Loss
