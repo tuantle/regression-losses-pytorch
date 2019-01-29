@@ -76,7 +76,7 @@ Another shared characteristic is that they approximate MSE loss when
 
 ## Setup
 
-For our experiment, we will be using pytorch framework and MNIST dataset. Pytorch is great for experimentation and super easy to setup. MNIST is a basic starting dataset that we can use for now. And the type of experiment is to recontruct MNIST ditgits using a simple autoencoder network model with a regression loss objective.
+For our experiment, we will be using pytorch framework and MNIST dataset. Pytorch is great for experimentation and super easy to setup. MNIST is a basic starting dataset that we can use for now. And the type of experiment is to recontruct MNIST ditgits using a simple autoencoder network model with regression loss functions listed above as reconstruction loss objective. Since we are using symetric loss functions, prediction penalties for low and high intensity MNIST pixel values will be treated equaly, which is what we wanted for this experiement. 
 
 ```python
 import os
@@ -121,15 +121,6 @@ class XSigmoidLoss(torch.nn.Module):
     def forward(self, y_t, y_prime_t):
         ey_t = y_t - y_prime_t
         return torch.mean(2 * ey_t / (1 + torch.exp(-ey_t)) - ey_t)
-
-
-class AlgebraicLoss(torch.nn.Module):
-    def __init__(self):
-        super().__init__()
-
-    def forward(self, y_t, y_prime_t):
-        ey_t = y_t - y_prime_t
-        return torch.mean(ey_t * ey_t / torch.sqrt(1 + ey_t * ey_t))
 
 ```
 
